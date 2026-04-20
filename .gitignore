@@ -1,0 +1,11 @@
+## `.gitignore`
+```gitignore
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+*.pyc
+*.pyo
+*.pyd
+data/raw/
+.DS_Store
+Thumbs.db
