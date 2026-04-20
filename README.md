@@ -26,13 +26,13 @@ The workflow:
 
 ## Project Structure
 ```text
-fair_net_project/
+Spatial Network Analysis of Munich's Public Transit/
 │
 ├── data/
 │   ├── raw/
 │   └── processed/
 ├── notebooks/
-│   └── transport_network_analysis.ipynb
+│   └── Spatial Network Analysis of Munich's Public Transit.ipynb
 ├── outputs/
 │   ├── maps/
 │   └── tables/
