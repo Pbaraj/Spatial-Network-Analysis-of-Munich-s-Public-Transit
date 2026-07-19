@@ -1,0 +1,6 @@
+name: munich-public-transit-network-analysis
+title: Munich Public Transit Network Analysis
+version: '1.0'
+
+nav:
+  - modules/ROOT/nav.adoc
