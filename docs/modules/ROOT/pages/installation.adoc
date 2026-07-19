@@ -1,0 +1,189 @@
+= Installation and Setup
+
+== Prerequisites
+
+Install the following software:
+
+* Git
+* Python 3.10 or newer
+* Jupyter Notebook or JupyterLab
+
+== Clone the Repository
+
+Open PowerShell and run:
+
+[source,powershell]
+----
+git clone https://github.com/Pbaraj/Spatial-Network-Analysis-of-Munich-s-Public-Transit.git
+cd Spatial-Network-Analysis-of-Munich-s-Public-Transit
+----
+
+== Create a Virtual Environment
+
+Create a Python virtual environment in the repository:
+
+[source,powershell]
+----
+python -m venv .venv
+----
+
+Activate the virtual environment:
+
+[source,powershell]
+----
+.\.venv\Scripts\Activate.ps1
+----
+
+After activation, the terminal should show:
+
+[source,text]
+----
+(.venv)
+----
+
+== Install the Required Packages
+
+Upgrade pip:
+
+[source,powershell]
+----
+python -m pip install --upgrade pip
+----
+
+Install the required Python packages:
+
+[source,powershell]
+----
+pip install pandas geopandas osmnx networkx partridge matplotlib jupyter ipykernel
+----
+
+These libraries are used for:
+
+[cols="1,2"]
+|===
+|Library |Purpose
+
+|pandas
+|Tabular data processing
+
+|GeoPandas
+|Geospatial data processing
+
+|OSMnx
+|Downloading and analysing OpenStreetMap networks
+
+|NetworkX
+|Graph construction and network analysis
+
+|Partridge
+|Loading and filtering GTFS data
+
+|Matplotlib
+|Creating plots and visualisations
+
+|Jupyter
+|Running the project notebook
+|===
+
+== Register the Python Environment
+
+Register the virtual environment as a Jupyter kernel:
+
+[source,powershell]
+----
+python -m ipykernel install --user --name munich-transit --display-name "Python (Munich Transit)"
+----
+
+== Start Jupyter Notebook
+
+From the repository root, run:
+
+[source,powershell]
+----
+jupyter notebook
+----
+
+A browser window should open automatically.
+
+Navigate to:
+
+[source,text]
+----
+notebooks/
+----
+
+Then open:
+
+[source,text]
+----
+Spatial Network Analysis of Munich's Public Transit.ipynb
+----
+
+== Select the Correct Kernel
+
+Inside Jupyter Notebook:
+
+. Open the notebook.
+. Select the **Kernel** menu.
+. Choose **Change Kernel**.
+. Select **Python (Munich Transit)**.
+
+== Data Requirements
+
+The analysis requires:
+
+* GTFS public transport schedule data
+* Internet access for downloading OpenStreetMap network data
+
+Place any locally downloaded GTFS files in the appropriate directory under:
+
+[source,text]
+----
+data/
+----
+
+Large raw data files should normally not be committed to GitHub.
+
+== Run the Analysis
+
+Run the notebook cells in order:
+
+. Load the required Python libraries.
+. Load and filter the GTFS data.
+. Download the Munich OpenStreetMap network.
+. Connect transit stops to the road network.
+. Calculate network indicators.
+. Generate maps, tables, and processed datasets.
+
+Generated results are stored under:
+
+[source,text]
+----
+outputs/
+----
+
+Processed data can be stored under:
+
+[source,text]
+----
+data/processed/
+----
+
+== Start the Project Again Later
+
+Open PowerShell in the repository and run:
+
+[source,powershell]
+----
+.\.venv\Scripts\Activate.ps1
+jupyter notebook
+----
+
+== Deactivate the Environment
+
+When finished, run:
+
+[source,powershell]
+----
+deactivate
+----
