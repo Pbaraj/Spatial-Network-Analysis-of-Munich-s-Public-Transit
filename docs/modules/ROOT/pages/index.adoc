@@ -1,0 +1,78 @@
+= Munich Public Transit Network Analysis
+
+This project provides a Python-based workflow for extracting, processing, and analysing public transport network data for Munich.
+
+It combines public transport schedule data from GTFS with road-network data from OpenStreetMap to study the spatial structure and connectivity of Munich's public transport system.
+
+== Main Workflow
+
+The project performs the following steps:
+
+. Load public transport schedule data from GTFS.
+. Filter the data to the Munich metropolitan area.
+. Download the Munich road network from OpenStreetMap.
+. Link public transport stops to the underlying road network.
+. Build and analyse graph-based network structures.
+. Calculate network indicators using NetworkX.
+. Export processed datasets, tables, maps, and visualisations.
+
+== Main Features
+
+* GTFS schedule-data processing
+* Geographic filtering for the Munich area
+* OpenStreetMap road-network extraction
+* Spatial linking of public transport stops and road nodes
+* Graph-based public transport analysis
+* Generation of processed geospatial datasets
+* Export of maps and result tables
+* Reproducible analysis using a Jupyter Notebook
+
+== Tools and Libraries
+
+* Python
+* pandas
+* GeoPandas
+* OSMnx
+* NetworkX
+* Partridge
+* Matplotlib
+* Jupyter Notebook
+
+== Data Sources
+
+The project uses:
+
+* GTFS public transport schedule data
+* OpenStreetMap road-network data
+
+== Project Structure
+
+[source,text]
+----
+Spatial-Network-Analysis-of-Munich-s-Public-Transit/
+├── data/
+│   ├── raw/
+│   └── processed/
+├── notebooks/
+│   └── Spatial Network Analysis of Munich's Public Transit.ipynb
+├── outputs/
+│   ├── maps/
+│   └── tables/
+├── docs/
+├── README.md
+└── .gitignore
+----
+
+== Outputs
+
+The workflow generates:
+
+* Processed public transport datasets
+* Spatially linked stop and road-network data
+* Network-analysis results
+* Maps and visualisations
+* Summary tables
+
+== Project Purpose
+
+The purpose of this project is to demonstrate how GTFS, OpenStreetMap, geospatial analysis, and graph theory can be combined to analyse an urban public transport network.
